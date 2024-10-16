@@ -1,0 +1,98 @@
+# invoke rewrite engine
+RewriteEngine On
+RewriteBase /
+
+Options -Indexes
+<IfModule mod_negotiation.c>
+	Options -MultiViews
+</IfModule>
+
+# Redirect non-www to www
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Create pretty URLs
+DirectorySlash Off
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+# End: Create pretty URLs
+
+# Specific redirections
+RewriteRule ^index\.html$ / [L,R=301]
+RewriteCond %{QUERY_STRING} ^tag=metcalfe&p=http$
+RewriteRule ^$ tag-metcalfe-p-http.html [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^subject=How$
+RewriteRule ^$ subject-How.html [L,R=301,QSD]
+RewriteRule ^links/Courses/Amuse-gueules_%26_Nibbles/index\.html$ links/Courses/Amuse-gueules_-_Nibbles/index.html [L,R=301,QSD]
+RewriteRule ^links/Courses/Desserts_%26_Puddings/index\.html$ links/Courses/Desserts_-_Puddings/index.html [L,R=301,QSD]
+RewriteRule ^links/Courses/Starters_%26_Appetisers/index\.html$ links/Courses/Starters_-_Appetisers/index.html [L,R=301,QSD]
+RewriteRule ^links/Courses/Starters_%26_Appetisers/more2\.html$ links/Courses/Starters_-_Appetisers/more2.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Bacon_%26_Ham$ links/Ingredients/Bacon_-_Ham.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Beans_%26_Pulses$ links/Ingredients/Beans_-_Pulses.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood/index\.html$ links/Ingredients/Fish_-_Seafood/index.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood/Cod$ links/Ingredients/Fish_-_Seafood/Cod.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood/Monkfish$ links/Ingredients/Fish_-_Seafood/Monkfish.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_&_Seafood/Mussels$ links/Ingredients/Fish_-_Seafood/Mussels.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_&_Seafood/Prawns_&_Shrimps$ links/Ingredients/Fish_-_Seafood/Prawns_-_Shrimps.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood/Salmon$ links/Ingredients/Fish_-_Seafood/Salmon.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood/Scallops$ links/Ingredients/Fish_-_Seafood/Scallops.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood/Swordfish$ links/Ingredients/Fish_-_Seafood/Swordfish.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood/Trout$ links/Ingredients/Fish_-_Seafood/Trout.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood/Tuna$ links/Ingredients/Fish_-_Seafood/Tuna.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Herbs_%26_Spices$ links/Ingredients/Herbs_-_Spices.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Herbs_%26_Spices/Basil$ links/Ingredients/Herbs_-_Spices/Basil.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Herbs_%26_Spices/Chives$ links/Ingredients/Herbs_-_Spices/Chives.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Herbs_%26_Spices/Coriander_or_Cilantro$ links/Ingredients/Herbs_-_Spices/Coriander_or_Cilantro.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Herbs_%26_Spices/Tarragon$ links/Ingredients/Herbs_-_Spices/Tarragon.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Meat/Beef_%26_Veal$ links/Ingredients/Meat/Beef_-_Veal.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Nuts_%26_Seeds$ links/Ingredients/Nuts_-_Seeds.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Nuts_%26_Seeds/Almonds$ links/Ingredients/Nuts_-_Seeds/Almonds.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Nuts_&_Seeds/Pine_kernels$ links/Ingredients/Nuts_-_Seeds/Pine_kernels.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Spirits_&_Liqueurs$ links/Ingredients/Spirits_-_Liqueurs.html [L,R=301,QSD]
+RewriteRule ^links/Types/Accompaniments_&_Side_Dishes/index\.html$ links/Types/Accompaniments_-_Side_Dishes/index.html [L,R=301,QSD]
+RewriteRule ^links/Types/Casseroles_&_Stews$ links/Types/Casseroles_-_Stews.html [L,R=301,QSD]
+RewriteRule ^links/Types/Cookies_&_Biscuits/index\.html$ links/Types/Cookies_-_Biscuits/index.html [L,R=301,QSD]
+RewriteRule ^links/Types/Loaves_&_Terrines$ links/Types/Loaves_-_Terrines.html [L,R=301,QSD]
+RewriteRule ^links/Types/Pies_&_Pastries$ links/Types/Pies_-_Pastries.html [L,R=301,QSD]
+RewriteRule ^links/Types/Quick_&_Easy$ links/Types/Quick_-_Easy.html [L,R=301,QSD]
+RewriteRule ^links/Types/Sauces_&_Dressings/index\.html$ links/Types/Sauces_-_Dressings/index.html [L,R=301,QSD]
+RewriteRule ^links/Types/Soups_&_Stocks/index\.html$ links/Types/Soups_-_Stocks/index.html [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^D=A$
+RewriteRule ^recipes/recipes$ recipes/recipes/D-A.html [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^M=A$
+RewriteRule ^recipes/recipes$ recipes/recipes/M-A.html [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^N=A$
+RewriteRule ^recipes/recipes$ recipes/recipes/N-A.html [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^N=D$
+RewriteRule ^recipes/recipes$ recipes/recipes/N-D.html [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^S=A$
+RewriteRule ^recipes/recipes$ recipes/recipes/S-A.html [L,R=301,QSD]
+RewriteRule ^links/Courses/Desserts_%26_Puddings$ links/Courses/Desserts_-_Puddings.html [L,R=301,QSD]
+RewriteRule ^links/Courses/Starters_%26_Appetisers$ links/Courses/Starters_-_Appetisers.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood$ links/Ingredients/Fish_-_Seafood.html [L,R=301,QSD]
+RewriteRule ^links/Types/Accompaniments_%26_Side_Dishes$ links/Types/Accompaniments_-_Side_Dishes.html [L,R=301,QSD]
+RewriteRule ^links/Types/Cookies_%26_Biscuits$ links/Types/Cookies_-_Biscuits.html [L,R=301,QSD]
+RewriteRule ^links/Types/Sauces_%26_Dressings$ links/Types/Sauces_-_Dressings.html [L,R=301,QSD]
+RewriteRule ^links/Types/Soups_%26_Stocks$ links/Types/Soups_-_Stocks.html [L,R=301,QSD]
+
+# Redirect all extensions to html
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.shtml$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.phtml$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.jhtml$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.htm$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.php$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.aspx$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.asp$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.jsp$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.apk$ $1.html [L,NC,R=301]
+# End: Redirect all extensions to html

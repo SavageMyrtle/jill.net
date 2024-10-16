@@ -1,0 +1,94 @@
+# invoke rewrite engine
+RewriteEngine On
+RewriteBase /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/
+
+Options -Indexes
+<IfModule mod_negotiation.c>
+	Options -MultiViews
+</IfModule>
+
+# Create pretty URLs
+DirectorySlash Off
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+# End: Create pretty URLs
+
+# Specific redirections
+RewriteRule ^index\.html$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/ [L,R=301]
+RewriteCond %{QUERY_STRING} ^tag=metcalfe&p=http$
+RewriteRule ^$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/tag-metcalfe-p-http.html [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^subject=How$
+RewriteRule ^$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/subject-How.html [L,R=301,QSD]
+RewriteRule ^links/Courses/Amuse-gueules_%26_Nibbles/index\.html$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Courses/Amuse-gueules_-_Nibbles/index.html [L,R=301,QSD]
+RewriteRule ^links/Courses/Desserts_%26_Puddings/index\.html$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Courses/Desserts_-_Puddings/index.html [L,R=301,QSD]
+RewriteRule ^links/Courses/Starters_%26_Appetisers/index\.html$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Courses/Starters_-_Appetisers/index.html [L,R=301,QSD]
+RewriteRule ^links/Courses/Starters_%26_Appetisers/more2\.html$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Courses/Starters_-_Appetisers/more2.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Bacon_%26_Ham$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Bacon_-_Ham.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Beans_%26_Pulses$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Beans_-_Pulses.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood/index\.html$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Fish_-_Seafood/index.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood/Cod$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Fish_-_Seafood/Cod.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood/Monkfish$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Fish_-_Seafood/Monkfish.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_&_Seafood/Mussels$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Fish_-_Seafood/Mussels.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_&_Seafood/Prawns_&_Shrimps$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Fish_-_Seafood/Prawns_-_Shrimps.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood/Salmon$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Fish_-_Seafood/Salmon.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood/Scallops$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Fish_-_Seafood/Scallops.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood/Swordfish$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Fish_-_Seafood/Swordfish.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood/Trout$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Fish_-_Seafood/Trout.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood/Tuna$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Fish_-_Seafood/Tuna.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Herbs_%26_Spices$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Herbs_-_Spices.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Herbs_%26_Spices/Basil$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Herbs_-_Spices/Basil.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Herbs_%26_Spices/Chives$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Herbs_-_Spices/Chives.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Herbs_%26_Spices/Coriander_or_Cilantro$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Herbs_-_Spices/Coriander_or_Cilantro.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Herbs_%26_Spices/Tarragon$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Herbs_-_Spices/Tarragon.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Meat/Beef_%26_Veal$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Meat/Beef_-_Veal.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Nuts_%26_Seeds$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Nuts_-_Seeds.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Nuts_%26_Seeds/Almonds$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Nuts_-_Seeds/Almonds.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Nuts_&_Seeds/Pine_kernels$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Nuts_-_Seeds/Pine_kernels.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Spirits_&_Liqueurs$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Spirits_-_Liqueurs.html [L,R=301,QSD]
+RewriteRule ^links/Types/Accompaniments_&_Side_Dishes/index\.html$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Types/Accompaniments_-_Side_Dishes/index.html [L,R=301,QSD]
+RewriteRule ^links/Types/Casseroles_&_Stews$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Types/Casseroles_-_Stews.html [L,R=301,QSD]
+RewriteRule ^links/Types/Cookies_&_Biscuits/index\.html$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Types/Cookies_-_Biscuits/index.html [L,R=301,QSD]
+RewriteRule ^links/Types/Loaves_&_Terrines$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Types/Loaves_-_Terrines.html [L,R=301,QSD]
+RewriteRule ^links/Types/Pies_&_Pastries$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Types/Pies_-_Pastries.html [L,R=301,QSD]
+RewriteRule ^links/Types/Quick_&_Easy$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Types/Quick_-_Easy.html [L,R=301,QSD]
+RewriteRule ^links/Types/Sauces_&_Dressings/index\.html$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Types/Sauces_-_Dressings/index.html [L,R=301,QSD]
+RewriteRule ^links/Types/Soups_&_Stocks/index\.html$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Types/Soups_-_Stocks/index.html [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^D=A$
+RewriteRule ^recipes/recipes$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/recipes/recipes/D-A.html [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^M=A$
+RewriteRule ^recipes/recipes$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/recipes/recipes/M-A.html [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^N=A$
+RewriteRule ^recipes/recipes$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/recipes/recipes/N-A.html [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^N=D$
+RewriteRule ^recipes/recipes$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/recipes/recipes/N-D.html [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^S=A$
+RewriteRule ^recipes/recipes$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/recipes/recipes/S-A.html [L,R=301,QSD]
+RewriteRule ^links/Courses/Desserts_%26_Puddings$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Courses/Desserts_-_Puddings.html [L,R=301,QSD]
+RewriteRule ^links/Courses/Starters_%26_Appetisers$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Courses/Starters_-_Appetisers.html [L,R=301,QSD]
+RewriteRule ^links/Ingredients/Fish_%26_Seafood$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Ingredients/Fish_-_Seafood.html [L,R=301,QSD]
+RewriteRule ^links/Types/Accompaniments_%26_Side_Dishes$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Types/Accompaniments_-_Side_Dishes.html [L,R=301,QSD]
+RewriteRule ^links/Types/Cookies_%26_Biscuits$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Types/Cookies_-_Biscuits.html [L,R=301,QSD]
+RewriteRule ^links/Types/Sauces_%26_Dressings$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Types/Sauces_-_Dressings.html [L,R=301,QSD]
+RewriteRule ^links/Types/Soups_%26_Stocks$ /scraping/files/live/jill.net_metcalfe.jill_gmail.com_qq54o7wdzh/links/Types/Soups_-_Stocks.html [L,R=301,QSD]
+
+# Redirect all extensions to html
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.shtml$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.phtml$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.jhtml$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.htm$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.php$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.aspx$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.asp$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.jsp$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.apk$ $1.html [L,NC,R=301]
+# End: Redirect all extensions to html

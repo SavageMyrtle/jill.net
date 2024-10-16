@@ -1,0 +1,20 @@
+/* Table cells in "Add" form */
+td.form  {
+	font-size : 10pt;
+	font-family : 'verdana, sans-serif';
+	font-weight : bold;
+}
+
+small.topnav {
+	font-size : 8pt;
+	font-family : 'sans-serif';
+}
+
+p {
+	font-size : 10pt;
+	font-family : 'verdana, sans-serif';
+}
+
+.red {
+	color : '#FF0000';
+}
